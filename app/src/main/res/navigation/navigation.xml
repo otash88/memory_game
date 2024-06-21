@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startScreen">
+    <fragment
+        android:id="@+id/startScreen"
+        tools:layout="@layout/screen_start"
+        android:name="com.example.mygame22048.ui.screen.start.StartScreen"
+        android:label="StartScreen" >
+        <action
+            android:id="@+id/action_startScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_home"
+        android:id="@+id/homeScreen"
+        android:name="com.example.mygame22048.ui.screen.home.HomeScreen"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_startScreen"
+            app:destination="@id/startScreen" />
+    </fragment>
+</navigation>
